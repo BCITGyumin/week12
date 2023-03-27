@@ -1,3 +1,11 @@
-.pink_background {
+.pinkBG {
     background-color: pink;
+}
+
+.greenBG {
+    background-color: green;
+}
+
+.aquaBG {
+    background-color: aqua;
 }
