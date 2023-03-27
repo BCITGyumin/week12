@@ -6,5 +6,22 @@ function alertUser()
     // btn.removeEventListener("click", alertUser);
 };
 
-btn.addEventListener("click", alertUser, {once: true})
+function changeBackground()
+{
+   document.body.classList.add("pink_background")
+}
 
+function textChange()
+{
+    if (btn.textContent === "Click Me!!!")
+    {
+        btn.textContent = "Clicked!";
+    }
+    else {
+        btn.textContent = "Click Me!!!";
+    }
+};
+
+btn.addEventListener("click", alertUser)
+btn.addEventListener("click", changeBackground)
+btn.addEventListener("click", textChange)
