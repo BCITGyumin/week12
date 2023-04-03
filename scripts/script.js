@@ -41,6 +41,18 @@
 
 
 
+
+// 1. find the element
+// 2. define a function to respond to the event
+// 3. use addEventListner
+
+
+
+
+
+// addEventListner
+// ----------------------------------------------------------
+
 // 1. find the element
 const btnContainer = document.querySelector(".button-container");
 
@@ -68,8 +80,30 @@ function changeTextColor(e)
 }
 
 // 3. use addEventListner
-btnContainer.addEventListener("click", changeBGGreen)
+btnContainer.addEventListener("mouseover", changeBGGreen)
 btnContainer.addEventListener("click", changeTextColor)
 
 
 btnContainer.classList.add("aquaBG");
+
+
+
+
+
+// morePractice
+//---------------------------------------------------------
+
+// 1. find the element
+let btnRef = document.querySelector("#clickMe");
+
+// 2. define a function to respond to the event
+function addNewBtnAndPara() {
+    const btn = document.createElement("button");
+    btn.textContent = "purple"
+    btnContainer.appendChild(btn)
+    // btn.addEventListener("mouseover", changeBGGreen)
+    // btn.addEventListener("click", changeTextColor)
+}
+
+// 3. use addEventListner
+btnRef.addEventListener("click", addNewBtnAndPara)
