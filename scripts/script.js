@@ -38,8 +38,14 @@
 
 // btn.addEventListener("click", updateImage);
 
+
+
+
+// 1. find the element
 const btnContainer = document.querySelector(".button-container");
 
+
+// 2. define a function to respond to the event
 function changeBGGreen(event)
 {
     if (event.target.tagName === "BUTTON")
@@ -52,5 +58,18 @@ function changeBGGreen(event)
     }
 }
 
-// btnContainer.classList.add("aquaBG");
-btnContainer.addEventListener("click", changeBGGreen);
+function changeTextColor(e)
+{
+    const clickedBtn = e.target
+    const color = clickedBtn.textContent
+    if (clickedBtn.tagName === "BUTTON") {
+    clickedBtn.style.color = color
+    }
+}
+
+// 3. use addEventListner
+btnContainer.addEventListener("click", changeBGGreen)
+btnContainer.addEventListener("click", changeTextColor)
+
+
+btnContainer.classList.add("aquaBG");
